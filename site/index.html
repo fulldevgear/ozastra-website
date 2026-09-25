@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html class="w-mod-js" data-wf-page="2535ec7769f8d3fff3642b7f" lang="en"><head><script data-ozastra-chromium="bootstrap">document.documentElement.dataset.ozastraHero = new URLSearchParams(location.search).get('hero') === 'still' ? 'still' : 'chromium';document.documentElement.dataset.ozastraTransition = new URLSearchParams(location.search).get('transition') !== 'off' ? 'on' : 'off';document.documentElement.dataset.ozastraMission = 'on';</script><link data-ozastra-delivery="styles" href="/assets/ozastra/delivery/site-26fd0e84b3aa.css" rel="stylesheet"/><meta charset="utf-8"/><title>Ozastra</title><meta content="Ozastra builds SaaS, web and mobile apps, integrates AI, and helps businesses establish trusted data through data governance and MDM." name="description"/><meta content="Ozastra: Software, AI &amp; Trusted Data" property="og:title"/><meta content="Ozastra builds SaaS, web and mobile apps, integrates AI, and helps businesses establish trusted data through data governance and MDM." property="og:description"/><meta content="https://ozastra.com/assets/ozastra/icons/ozastra-512.png" property="og:image"/><meta content="Ozastra: Software, AI &amp; Trusted Data" name="twitter:title"/><meta content="Ozastra builds SaaS, web and mobile apps, integrates AI, and helps businesses establish trusted data through data governance and MDM." name="twitter:description"/><meta content="https://ozastra.com/assets/ozastra/icons/ozastra-512.png" name="twitter:image"/><meta content="website" property="og:type"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link data-ozastra-startup="preload" href="/assets/ozastra/delivery/ozastra-chromium-hero-c08d3f68b6f8.js" rel="modulepreload"/><link as="image" data-ozastra-startup="preload" fetchpriority="high" href="/assets/ozastra/chromium-mobile.webp" media="(max-width: 767px)" rel="preload"/><link as="image" data-ozastra-startup="preload" fetchpriority="high" href="/assets/ozastra/chromium-desktop.webp" media="(min-width: 768px)" rel="preload"/><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ozastra",
+  "legalName": "Ozastra LLC",
+  "url": "/",
+  "description": "Ozastra builds SaaS, web and mobile apps, integrates AI, and helps businesses establish trusted data through data governance and MDM.",
+  "email": "contact@ozastra.com",
+  "logo": "/assets/ozastra/wordmark-black.svg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "knowsAbout": [
+    "SaaS",
+    "Web Development",
+    "Mobile Applications",
+    "AI Integration",
+    "Data Governance",
+    "Master Data Management"
+  ]
+}</script><script type="text/javascript">(function(e){var s={r:[]};e.wf={r:s.r,ready:t=>{s.r.push(t)}}})(window)</script><meta content="Cwj93SAy2cgrOIZAj4Xv_3_3guGHGJ4pWXibkbFIXGk" name="google-site-verification"/>
+<!-- Google tag (gtag.js) -->
+
+
+<!-- 3D Carousel CSS -->
+
+<meta content="index,follow" name="robots"/><script>// Ozastra contact: preserve the original form UI; prepare an email locally.
+document.addEventListener('click', function(event) {
+  const dropdownLink = event.target.closest('[data-dropdown] a[href^="#"]');
+  if (dropdownLink) {
+    const id = dropdownLink.closest('[data-dropdown]').getAttribute('data-dropdown');
+    const trigger = document.querySelector('[data-dropdown-trigger="' + id + '"]');
+    if (trigger) {
+      // Close through the existing dropdown handler, without its empty-hash navigation.
+      trigger.addEventListener('click', function(e) { e.preventDefault(); }, {once: true});
+      trigger.click();
+    }
+  }
+  if (event.target.closest('.nav-item.mobile a[href^="#"], .nav-item.mobile a[href^="/#"]')) {
+    document.querySelectorAll('[data-scramble-toggle]').forEach(function(toggle) {
+      if (typeof toggle._resetMenuScramble === 'function') toggle._resetMenuScramble();
+    });
+  }
+  const link = event.target.closest('form[data-ozastra-topic] [data-submit] a');
+  if (link) event.preventDefault();
+}, true);
+document.addEventListener('submit', function(event) {
+  const form = event.target;
+  if (!form.matches('form[data-ozastra-topic]')) return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  if (!form.reportValidity()) return;
+  const email = form.querySelector('input[type="email"]').value.trim();
+  const subject = 'Ozastra: ' + form.dataset.ozastraTopic;
+  const body = 'Hello Ozastra,\n\nI would like to discuss a ' + form.dataset.ozastraTopic + ' project.\n\nMy email: ' + email + '\n\nProject details:\n';
+  const notification = form.parentElement.querySelector('.w-form-done');
+  if (notification) {
+    notification.querySelector('.form-notification-p').textContent = 'Email draft prepared. Send it from your email app, or write to contact@ozastra.com.';
+    notification.style.display = 'block';
+  }
+  window.location.href = 'mailto:contact@ozastra.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+}, true);</script><script data-ozastra-entrance="controller" data-ozastra-inline-src="/assets/ozastra/page-entrance.js?v=f19a91472c88">/* Run in the head: stage the first frame before the page is painted. */
+(() => {
+  const root = document.documentElement;
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  // Each top-of-page load, including refresh, gets the same entrance.
+  // A previous visit must not bypass the staged first frame.
+  if (motion.matches || location.hash || scrollY > 4) return;
+
+  root.dataset.ozastraEntrance = 'pending';
+  let finished = false;
+  let completion;
+  // A failed font, script or animation must never leave the page concealed.
+  const failsafe = setTimeout(finish, 2400);
+  const controller = new AbortController();
+  const options = { passive: true, signal: controller.signal };
+
+  function finish() {
+    if (finished) return;
+    finished = true;
+    delete root.dataset.ozastraEntrance;
+    clearTimeout(failsafe);
+    clearTimeout(completion);
+    controller.abort();
+  }
+  for (const name of ['wheel', 'touchstart', 'pointerdown', 'keydown', 'focusin']) {
+    addEventListener(name, finish, options);
+  }
+  addEventListener('scroll', () => { if (scrollY > 4) finish(); }, options);
+  addEventListener('pageshow', event => { if (event.persisted) finish(); }, options);
+  motion.addEventListener('change', () => { if (motion.matches) finish(); }, options);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) finish(); }, options);
+
+  function backgroundReady() {
+    const layer = document.querySelector('[data-ozastra-chromium="environment"]') ||
+      document.querySelector('[data-ozastra-chromium="layer"]');
+    if (!layer) return Promise.resolve();
+    // WebGL initializes asynchronously. Do not reveal the poster and then
+    // replace it abruptly halfway through the entrance.
+    return new Promise(resolve => {
+      let frame;
+      let settled = false;
+      const timeout = setTimeout(done, 600);
+      const poster = layer.querySelector('img');
+      let decoded = !poster;
+      poster?.decode().then(() => { decoded = true; }, () => { decoded = true; });
+      function done() {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timeout);
+        cancelAnimationFrame(frame);
+        resolve();
+      }
+      function check() {
+        const state = layer.dataset.state;
+        if (finished || state === 'running' || state === 'paused' || (state === 'still' && decoded)) {
+          done();
+        } else frame = requestAnimationFrame(check);
+      }
+      check();
+    });
+  }
+
+  let started = false;
+  async function start() {
+    if (started || finished) return;
+    started = true;
+    await Promise.all([
+      Promise.race([document.fonts.ready, new Promise(resolve => setTimeout(resolve, 240))]),
+      backgroundReady()
+    ]);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      if (finished) return;
+      if (scrollY > 4 || motion.matches) { finish(); return; }
+      // The loading watchdog must not cut an already running animation short.
+      clearTimeout(failsafe);
+      root.dataset.ozastraEntrance = 'running';
+      completion = setTimeout(finish, 1540);
+    }));
+  }
+  if (document.readyState === 'loading') {
+    // The hero only needs parsed markup, fonts and its first background frame.
+    // DOMContentLoaded also waits for every deferred legacy dependency, which
+    // used to exhaust the watchdog on an uncached visit and skip the entrance.
+    document.addEventListener('readystatechange', () => {
+      if (document.readyState !== 'loading') start();
+    }, { signal: controller.signal });
+  } else start();
+})();
+</script><link href="/favicon.ico?v=ozastra-rose-1" rel="icon" type="image/x-icon"/>
+<link href="/assets/ozastra/icons/ozastra-16.png?v=1" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/ozastra/icons/ozastra-32.png?v=1" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/ozastra/icons/ozastra-48.png?v=1" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/assets/ozastra/icons/ozastra-180.png?v=1" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/assets/ozastra/icons/ozastra-192.png?v=1" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/assets/ozastra/icons/ozastra-512.png?v=1" rel="icon" sizes="512x512" type="image/png"/>
+
+
+<link href="https://ozastra.com/" rel="canonical"/><meta content="https://ozastra.com/" property="og:url"/></head><body class="global-body"><div aria-hidden="true" class="ozastra-chromium" data-ozastra-chromium="environment" data-state="poster"><picture><source media="(max-width: 767px)" srcset="/assets/ozastra/chromium-mobile.webp"/><img alt="" decoding="async" fetchpriority="high" height="1600" src="/assets/ozastra/chromium-desktop.webp" width="2560"/></picture><canvas></canvas></div><div class="embed w-embed"></div><div class="nav w-nav" data-animation="default" data-collapse="medium" data-duration="1" data-easing="ease" data-easing2="ease" data-ozastra-nav-theme="dark" data-w-id="02a574a0-3947-00bc-fdbd-f2aa5ff362a3" data-wf--navigation--variant="base" ms-code-scroll-offset="" role="banner"><div class="nav-default" data-w-id="02a574a0-b415-6c5e-319a-2a68f28ba1a3"><a aria-current="page" class="nav-logo-div w-inline-block w--current" data-w-id="02a574a0-d966-dda6-0ac6-0a7a27134224" data-wf-element-id="02a574a0-d966-dda6-0ac6-0a7a27134224" href="#top" id="w-node-_02a574a0-d966-dda6-0ac6-0a7a27134224-9089315a"><span class="ozastra-nav-wordmark secondary-btn-txt">OZASTRA</span></a><div class="nav-items-outer" id="w-node-_02a574a0-7a0d-8677-7cd0-37b6d7a37c57-9089315a"><nav class="nav-items-inner w-nav-menu" data-w-id="02a574a0-5892-1951-d59f-7f6eaece20da" role="navigation"><ul class="nav-items-list w-list-unstyled" data-lenis-prevent="" role="list"><li class="nav-item desktop"><a class="nav-link w-inline-block" data-wf-element-id="02a574a0-0fb4-d33c-2c4b-b6bbfa750a17" href="#about"><div class="nav-link-txt">About</div></a></li><li class="nav-item desktop"><a class="nav-link w-inline-block" data-wf-element-id="02a574a0-5c30-0358-1a82-b5bec19910c1" href="#product"><div class="nav-link-txt">Expertise</div></a></li><li class="nav-item desktop"><a class="nav-link w-inline-block" data-wf-element-id="02a574a0-2832-6bad-6f31-b1c8c4e8db01" href="#team"><div class="nav-link-txt">Our approach</div></a></li><li class="nav-item desktop"><a class="nav-link last-in-list w-inline-block" data-wf-element-id="02a574a0-b6d6-c196-b63d-d98ddd1e7e27" href="#use-cases"><div class="nav-link-txt">Use cases</div></a></li><li class="nav-item mobile in_subpage"><a class="nav-link w-inline-block" data-scramble-menu-close="" data-wf-element-id="02a574a0-5bab-acee-58b9-4e7bd0f83515" href="#about"><div class="nav-link-txt" data-scramble-menu="">About</div></a></li><li class="nav-item mobile not_in_subpage"><a class="nav-link w-inline-block" data-scramble-menu-close="" data-wf-element-id="02a574a0-0e86-656c-b907-1a60e6da1e02" href="#about"><div class="nav-link-txt" data-scramble-menu="">About</div></a></li><li class="nav-item mobile"><a class="nav-link w-inline-block" data-scramble-menu-close="" data-wf-element-id="02a574a0-2a0c-32cf-804d-5b6eab09b08f" href="#product"><div class="nav-link-txt" data-scramble-menu="">Expertise</div></a></li><li class="nav-item mobile"><a class="nav-link w-inline-block" data-scramble-menu-close="" data-wf-element-id="02a574a0-900a-1848-8a2e-f6a2d2ae575e" href="#team"><div class="nav-link-txt" data-scramble-menu="">Our approach</div></a></li><li class="nav-item mobile"><a class="nav-link w-inline-block" data-wf-element-id="02a574a0-b24a-42d0-ae07-f04a55b2bebb" href="#use-cases"><div class="nav-link-txt" data-scramble-menu="">Use cases</div></a></li><li class="nav-item mobile"><a class="nav-link w-inline-block" data-wf-element-id="02a574a0-9c15-a8dc-5160-3c31ba6a7cf4" href="#start-a-project"><div class="nav-link-txt" data-scramble-menu="">Let's talk</div></a></li></ul></nav><div class="nav-btn-mobile" id="w-node-_02a574a0-22c4-d1a3-1a6e-16f4c67342ab-9089315a"><div aria-controls="w-nav-overlay-0" aria-expanded="false" aria-haspopup="menu" aria-label="menu" class="nav-btn w-nav-button" role="button" tabindex="0"><a class="button w-inline-block" data-scramble-toggle="" data-w-id="02a574a0-d229-c5a9-68b1-2e01061366e6" data-wf-element-id="02a574a0-d229-c5a9-68b1-2e01061366e6" href="#"><img alt="opening bracket icon" class="icon btn-1" loading="lazy" src="/assets/ozastra/resources/c1e4cb72a4d02563.svg"/><div class="button-txt" data-scramble-text="">Open menu</div><img alt="closing bracket icon" class="icon btn-2" loading="lazy" src="/assets/ozastra/resources/39945d0743a2c1cd.svg"/></a></div></div></div><div class="nav-btn-desktop" id="w-node-_02a574a0-c058-bc59-0e0f-0a4ba24fe445-9089315a"><div class="align-vertically is-right-aligned"><div class="section-layer-div _w-auto is-centered"><div class="section-layer-1 is-relative _w-auto" data-w-id="02a574a0-eda9-7dea-4afb-4c51bba02923"><a class="decode w-inline-block" data-scramble="" data-scramble-fixed-width="false" data-wf-element-id="02a574a0-56ca-4998-d25a-e2a77c12e7d8" href="#start-a-project"><div class="secondary-button"><div class="secondary-btn-txt" data-scramble-text=""><span>L</span><span>e</span><span>t</span><span>’</span><span>s</span><span> </span><span>t</span><span>a</span><span>l</span><span>k</span><span></span><span></span></div></div></a></div><div class="section-layer-2 is-absolute" data-w-id="02a574a0-0388-8ea8-9f77-baaee7969869"><a class="decode w-inline-block" data-scramble="" data-scramble-fixed-width="false" data-wf-element-id="02a574a0-abce-7f3a-7959-a27025c6ddb7" href="#start-a-project"><div class="secondary-button-dark"><div class="button-txt-div"><div class="secondary-btn-txt" data-scramble-text=""><span>L</span><span>e</span><span>t</span><span>’</span><span>s</span><span> </span><span>t</span><span>a</span><span>l</span><span>k</span><span></span><span></span></div></div></div></a></div></div></div></div></div></div><div class="main-content" id="top"><div class="breakpoint-section" data-ozastra-stage="hero" data-w-id="02a574a0-744f-3a01-1fdc-4223abaafe9e"><div class="vw-desktop"><div class="default-section h-100 is-black" data-w-id="02a574a0-0b2d-7b4a-d42c-f4c9e4438586"><div class="section-layer-div"><div class="section-layer-1"><div class="embed w-embed w-script"><div "="" id="hero-video-wrapper" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+<video id="video-hero" loop="" muted="" playsinline="" preload="auto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+</video>
+<video id="video-preloader" muted="" playsinline="" poster="/assets/ozastra/resources/5b8fe5ff818bbd43.avif" preload="auto" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; z-index: 2; ">
+</video>
+<div aria-hidden="true" class="ozastra-chromium" data-ozastra-chromium="layer" data-state="poster"><picture><source media="(max-width: 767px)" srcset="/assets/ozastra/chromium-mobile.webp"/><img alt="" decoding="async" fetchpriority="high" height="1600" src="/assets/ozastra/chromium-desktop.webp" width="2560"/></picture><canvas></canvas></div></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  if (document.documentElement.dataset.ozastraHero !== 'original') return; // Ozastra chromium
+  const vidPreloader = document.getElementById('video-preloader');
+  const vidHero = document.getElementById('video-hero');
+  let loadedVideos = 0;
+
+  // Funktion wird aufgerufen, wenn ein Video abspielbereit ist
+  function videoReady() {
+    loadedVideos++;
+    // Sobald BEIDE Videos bereit sind, geht es los
+    if (loadedVideos === 2) {
+      vidPreloader.play();
+    }
+  }
+
+  // Prüfen, ob Video 1 schon im Cache liegt (readyState 4) oder noch laden muss
+  if (vidPreloader.readyState >= 4) {
+    videoReady();
+  } else {
+    vidPreloader.addEventListener('canplaythrough', videoReady);
+  }
+
+  // Prüfen, ob Video 2 schon im Cache liegt
+  if (vidHero.readyState >= 4) {
+    videoReady();
+  } else {
+    vidHero.addEventListener('canplaythrough', videoReady);
+  }
+
+  // Sobald Video 1 (Preloader) zu Ende ist...
+  vidPreloader.addEventListener('ended', function() {
+    // ...starte Video 2
+    vidHero.play();
+    // ...und blende Video 1 aus, damit Video 2 sichtbar wird
+    vidPreloader.style.display = 'none'; 
+  });
+});
+</script></div></div><div class="section-layer-2" data-w-id="02a574a0-2146-0780-c908-89c873e8cb34"><div class="global-wrapper h-100 bp-3" data-ozastra-hero-editorial="content"><div class="ozastra-hero-copy">
+<h1 class="ozastra-hero-title"><span>From ideas</span><span>to impact.</span></h1>
+<p class="ozastra-hero-description">We build SaaS, web and mobile applications, integrate AI, and help teams make their business data reliable.</p>
+<div class="ozastra-hero-actions"><a class="ozastra-hero-work" href="#product">Explore our expertise<span aria-hidden="true">↓</span></a></div>
+</div></div></div></div></div></div><div class="vw-mobile"><div class="default-section h-100 is-black"><div class="section-layer-div"><div class="section-layer-1"><div class="embed w-embed w-script"><div id="hero-video-wrapper-mobile" style="position: relative; width: 100%; height: 100svh; overflow: hidden; background-color: #212121;">
+<video id="video-hero-mobile" loop="" muted="" playsinline="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+</video>
+<video id="video-preloader-mobile" muted="" playsinline="" poster="/assets/ozastra/resources/5b8fe5ff818bbd43.avif" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; z-index: 2; ">
+</video>
+<div aria-hidden="true" class="ozastra-chromium" data-ozastra-chromium="layer" data-state="poster"><picture><source media="(max-width: 767px)" srcset="/assets/ozastra/chromium-mobile.webp"/><img alt="" decoding="async" fetchpriority="high" height="1600" src="/assets/ozastra/chromium-desktop.webp" width="2560"/></picture><canvas></canvas></div></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  if (document.documentElement.dataset.ozastraHero !== 'original') return; // Ozastra chromium
+  const vidPreloaderMobile = document.getElementById('video-preloader-mobile');
+  const vidHeroMobile = document.getElementById('video-hero-mobile');
+
+  // iOS Safari braucht manchmal einen kleinen "Schubs", um die Dateien zu registrieren
+  vidPreloaderMobile.load();
+  vidHeroMobile.load();
+
+  // Wir versuchen sofort, das Preloader-Video zu starten
+  // Sobald .play() aufgerufen wird, beginnt der mobile Browser endlich mit dem Laden
+  let playPromise = vidPreloaderMobile.play();
+  
+  if (playPromise !== undefined) {
+    playPromise.then(_ => {
+      // Autoplay hat funktioniert!
+    }).catch(error => {
+      // Fallback: Autoplay wurde vom Gerät blockiert (z. B. Energiesparmodus)
+      console.log("Autoplay blockiert. Nutzer muss interagieren.");
+    });
+  }
+
+  // Sobald der Preloader zu Ende ist, wechseln wir zum Hero-Loop
+  vidPreloaderMobile.addEventListener('ended', function() {
+    vidPreloaderMobile.style.display = 'none'; 
+    vidHeroMobile.play();
+  });
+});
+</script></div></div><div class="section-layer-2 is-absolute" data-w-id="02a574a0-b9f6-1ccb-35fa-2b135e1d938b"><div class="hero-bg"></div></div><div class="section-layer-3 is-relative" data-w-id="02a574a0-2714-53d7-8511-69acc885b7a7"><div class="global-wrapper h-100 bp-3" data-ozastra-hero-editorial="content"><div class="ozastra-hero-copy">
+<h1 class="ozastra-hero-title"><span>From ideas</span><span>to impact.</span></h1>
+<p class="ozastra-hero-description">We build SaaS, web and mobile applications, integrate AI, and help teams make their business data reliable.</p>
+<div class="ozastra-hero-actions"><a class="ozastra-hero-work" href="#product">Explore our expertise<span aria-hidden="true">↓</span></a></div>
+</div></div></div></div></div></div></div><div aria-labelledby="ozastra-intro-title" class="default-section is-black" data-ozastra-stage="intro" id="ozastra-intro"><div class="ozastra-orbit-stage"><div aria-hidden="true" class="ozastra-orbit-cards"><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/opening-c1d2138037.webp" width="560"/><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/aurora-82f4309e56.webp" width="560"/><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/relay-1131af5680.webp" width="560"/><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/dialogue-3ce0ec4cc8.webp" width="560"/><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/spark-c65deb4ef2.webp" width="560"/><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/echo-0708159ceb.webp" width="560"/><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/together-7f29a1d4a0.webp" width="560"/><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/daybreak-210ef97817.webp" width="560"/><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/continuum-56e38564a6.webp" width="560"/><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/perspective-ae290b2511.webp" width="560"/><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/resonance-7f66977fa7.webp" width="560"/><img alt="" class="ozastra-orbit-card" decoding="async" height="700" loading="lazy" src="/assets/ozastra/web-artwork/afterglow-0e3bcd274e.webp" width="560"/></div><div class="ozastra-orbit-message"><p class="ozastra-orbit-eyebrow">PRODUCTS. INTELLIGENCE. DATA.</p><h2 id="ozastra-intro-title">Ideas into products.<br/><span>Data into clarity.</span></h2><p class="ozastra-orbit-connection">Ozastra connects the two.</p></div></div></div><div class="default-section mh-100" data-ozastra-stage="mission" id="about"><div class="nav-black-to-white"></div><div class="global-wrapper lp-0"><div class="ozastra-purpose-grid"><div class="ozastra-purpose-artwork"><div class="lottie" data-w-id="02a574a0-17bb-7b15-ce5e-5b28dcbc8475" id="mission-lottie"></div></div><div class="ozastra-purpose-copy"><p class="eyebrow">OUR MISSION</p><h2 id="ozastra-mission-title">Turn complexity <br/>into something <br/><span>useful.</span></h2><p class="intro">We turn complex business needs into useful products and dependable data foundations, with clear decisions and long-term ownership in mind.</p></div></div></div></div><div class="default-section is-extra-black mh-100" data-ozastra-stage="expertise" id="product"><div class="nav-white-to-dark-black" data-w-id="02a574a0-7700-f8c9-7c9e-0db5162207ae"></div><div class="global-wrapper mw-90"><div class="ozastra-expertise"><div class="section-heading"><h2 id="expertise-title">Two ways to move forward</h2><button aria-pressed="false" class="expertise-pause" type="button">Pause expertise animations</button></div><div class="panels">
+<article aria-labelledby="digital-ai" class="panel products">
+<div class="scene" id="products-scene"><svg aria-label="Colourful pieces assemble into a web application and a mobile screen, then exchange signals with an AI component." role="img" viewbox="0 0 560 360"></svg></div>
+<div class="copy"><h3 id="digital-ai">Software &amp; AI</h3><h4>From idea to working product.</h4><p>We design and build SaaS platforms, web and mobile applications, with AI integrated where it adds value.</p></div>
+</article>
+<article aria-labelledby="data-mdm" class="panel data">
+<div class="scene" id="data-scene"><svg aria-label="Duplicate records, conflicting values and unowned data resolve into an interconnected master-data circuit. All records shown are illustrative." role="img" viewbox="0 0 560 360"></svg></div>
+<div class="copy"><h3 id="data-mdm">Data Governance &amp; MDM</h3><h4>Clear ownership. Consistent data.</h4><p>Governance, data quality and master data management that help your systems and teams work together.</p></div>
+</article>
+</div></div></div></div><div aria-labelledby="oz-approach-title" class="default-section overflow-none mh-100" data-ozastra-approach="" id="team">
+<div class="nav-dark-black-to-white"></div>
+<div class="global-wrapper oz-approach">
+<header class="oz-approach-intro">
+<div><p class="oz-approach-eyebrow">OUR APPROACH</p><h2 id="oz-approach-title">How we think.<br/><span>How we work.</span></h2></div>
+<div class="oz-approach-opening"><p>A useful product. Data people can trust.<br/>Both start with understanding the business behind them.</p><p>From building Flowtopus to our team’s work in enterprise data, one idea connects what we do: the solution has to make sense for the people who will use it, own it and take it forward.</p></div>
+</header>
+<div class="oz-approach-principles">
+<article class="oz-approach-row">
+<div class="oz-approach-heading"><span class="oz-approach-number"><span class="oz-approach-index">01</span><i aria-hidden="true"></i>UNDERSTAND</span><h3>Start with the business.<br/>Then the solution.</h3></div>
+<figure><img alt="Understand first. Build with purpose. Pink poster with a connected rhythm of burgundy bars and cream steps." decoding="async" height="800" loading="lazy" src="/assets/ozastra/approach-editorial/understand-16f1f777d6.webp" width="640"/></figure>
+<div class="oz-approach-copy"><p>Before choosing a tool or designing a screen, we look at how the work happens today. Where do people lose time? Which decisions are difficult? What needs to become easier?</p><p>Those questions give the project its direction and give us a reason to challenge a feature or an assumption when it doesn’t serve the goal.</p></div>
+</article>
+<article class="oz-approach-row">
+<div class="oz-approach-heading"><span class="oz-approach-number"><span class="oz-approach-index">02</span><i aria-hidden="true"></i>MAKE SENSE</span><h3>Make complexity<br/>understandable.</h3></div>
+<figure><img alt="Complexity, made clear. Coral poster with interwoven paths resolving into clear parallel lines." decoding="async" height="800" loading="lazy" src="/assets/ozastra/approach-editorial/clarity-c3a9dc3f80.webp" width="640"/></figure>
+<div class="oz-approach-copy"><p>A purchasing decision can depend on stock, orders and supplier information. A trusted data record can depend on definitions, matching rules and clear ownership.</p><p>We work through those connections so the people using the result can understand what they see, where it comes from and what to do next.</p></div>
+</article>
+<article class="oz-approach-row">
+<div class="oz-approach-heading"><span class="oz-approach-number"><span class="oz-approach-index">03</span><i aria-hidden="true"></i>LEARN TOGETHER</span><h3>Make it tangible.<br/>Keep the conversation open.</h3></div>
+<figure><img alt="Make. Share. Learn. Repeat. Blue poster with two geometric loops meeting around a shared prototype." decoding="async" height="800" loading="lazy" src="/assets/ozastra/approach-editorial/dialogue-65be50790c.webp" width="640"/></figure>
+<div class="oz-approach-copy"><p>A working screen, a mapped data flow or a real record often reveals more than another page of requirements. We use tangible work to make assumptions visible and decisions easier to discuss.</p><p>We bring business and technical perspectives into that conversation, explain the trade-offs and refine the work as we learn.</p></div>
+</article>
+<article class="oz-approach-row">
+<div class="oz-approach-heading"><span class="oz-approach-number"><span class="oz-approach-index">04</span><i aria-hidden="true"></i>THINK AHEAD</span><h3>Build for what<br/>comes after launch.</h3></div>
+<figure><img alt="Built for what’s next. Ivory poster with cobalt arches growing from a shared foundation." decoding="async" height="800" loading="lazy" src="/assets/ozastra/approach-editorial/evolve-a259bc6fc3.webp" width="640"/></figure>
+<div class="oz-approach-copy"><p>Delivery is a point in the life of a product or a data foundation. People will maintain it, question it and ask it to do more.</p><p>That is why we think about documentation, ownership and room to evolve while we build. The aim is a result your team can understand and continue to work with.</p></div>
+</article>
+</div>
+<section aria-labelledby="oz-working-title" class="oz-working">
+<h2 id="oz-working-title">Working with Ozastra</h2>
+<ol class="oz-working-steps">
+<li><span aria-hidden="true" class="oz-working-number">01</span><h3>Start with a conversation</h3><p>Tell us what you want to build or improve, what is getting in the way, and what already exists. We use that first conversation to clarify the need and identify the next step.</p></li>
+<li><span aria-hidden="true" class="oz-working-number">02</span><h3>Agree on the scope</h3><p>Before work begins, we define the deliverables, responsibilities, timeline and budget together. You know what is included and which decisions need your input.</p></li>
+<li><span aria-hidden="true" class="oz-working-number">03</span><h3>Stay involved as the work takes shape</h3><p>We agree on a main point of contact and a rhythm for updates and reviews. You see tangible progress, discuss trade-offs and validate the direction throughout the project.</p></li>
+<li><span aria-hidden="true" class="oz-working-number">04</span><h3>Plan the handover</h3><p>We agree on the documentation, access and knowledge transfer your team needs. Any ongoing support is scoped explicitly.</p></li>
+</ol>
+</section>
+</div>
+</div><div class="breakpoint-section" id="use-cases"><div class="nav-white-to-black"></div><div class="vw-desktop"><div class="default-section is-black vh-100" data-ozastra-cases="work" id="research"><div class="global-wrapper h-100"><div class="section-layer-div overflow-active"><div class="section-layer-2"><div class="align-vertically is-left-aligned h-100"><div class="align-vertically is-left-aligned h-100"><div class="align-vertically h-100 is-top-aligned"><div class="sticky-wrap"><h2 class="global-headline-s is-left-aligned is-white">Selected work &amp; team experience</h2><div class="global-subline-div _05 is-left-aligned"><div class="max-width _25"><p class="copytext is-left-aligned is-grey">A product built by Ozastra. Enterprise data experience brought by our team.</p></div></div></div></div></div><div class="global-subline-div _5"><div class="cms w-dyn-list"><div class="global-grid w-dyn-items" role="list"><div class="articel-item w-dyn-item" id="w-node-_02a574a0-688e-1eb8-6f7b-5656963fc8e2-04f7ce1b" role="listitem"><a class="decode w-inline-block" data-scramble="" data-wf-element-id="02a574a0-603c-caa3-2813-b4f91d6190ba" href="https://www.flowtopus.com/" rel="noopener noreferrer" target="_blank"><div class="global-grid"><div class="img-wrap-blog" data-case-brand="flowtopus" id="w-node-02a574a0-57f3-1f83-afe4-862abaeb95d5-7c435fa5"><img alt="Purchasing. With perspective. Flowtopus for Shopify." decoding="async" height="700" loading="lazy" src="/assets/ozastra/case-artwork/flowtopus-shopify-purchasing.webp" width="560"/></div><div class="align-vertically is-left-aligned h-100 is-stretched" id="w-node-_02a574a0-e08c-9076-1a3c-f1d8c6f8b01f-04f7ce1b"><div class="align-vertically is-left-aligned"><h3 class="copytext is-left-aligned is-white is-azeret is-regular-caps is-semi">Flowtopus: Software &amp; SaaS</h3><div class="global-subline-div _05"><p class="copytext-small is-left-aligned is-grey">Inventory, purchasing and AI-powered supplier intelligence in one workspace. Built by Ozastra to help Shopify teams connect stock visibility with their next purchasing decision.</p></div></div><div class="global-subline-div _1 is-left-aligned"><div class="button-txt is-grey" data-scramble-text="">Explore Flowtopus</div></div></div></div></a></div><div class="articel-item w-dyn-item" id="w-node-_02a574a0-688e-1eb8-6f7b-5656963fc8e2-04f7ce1b" role="listitem"><a class="decode w-inline-block" data-scramble="" data-wf-element-id="02a574a0-603c-caa3-2813-b4f91d6190ba" href="mailto:contact@ozastra.com?subject=Ozastra%20%3A%20Data%20governance%20and%20MDM"><div class="global-grid"><div class="img-wrap-blog" data-case-brand="data" id="w-node-02a574a0-57f3-1f83-afe4-862abaeb95d5-7c435fa5"><img alt="Two fields. One standard. Amundi and Johnson &amp; Johnson: finance and healthcare." decoding="async" height="700" loading="lazy" src="/assets/ozastra/case-artwork/data-common-ground.webp" width="560"/></div><div class="align-vertically is-left-aligned h-100 is-stretched" id="w-node-_02a574a0-e08c-9076-1a3c-f1d8c6f8b01f-04f7ce1b"><div class="align-vertically is-left-aligned"><h3 class="copytext is-left-aligned is-white is-azeret is-regular-caps is-semi">Data governance &amp; MDM</h3><div class="global-subline-div _05"><p class="copytext-small is-left-aligned is-grey">Six years of our team’s work at Amundi and Johnson &amp; Johnson, spanning reference-data automation, data architecture and master data management.</p></div></div><div class="global-subline-div _1 is-left-aligned"><div class="button-txt is-grey" data-scramble-text="">Discuss your data</div></div></div></div></a></div></div></div></div></div></div></div></div></div></div><div class="vw-mobile"><div class="default-section is-black" data-ozastra-cases="mobile" data-w-id="02a574a0-2264-ec69-b051-cf48821915f4"><div class="global-wrapper"><div class="global-headline-div is-left-aligned"><h2 class="global-headline-s is-left-aligned is-white">Selected work &amp; team experience</h2><div class="global-subline-div _05 is-left-aligned"><p class="copytext is-left-aligned is-grey">A product built by Ozastra. Enterprise data experience brought by our team.</p></div></div><div class="global-content-div _7"><div class="global-subline-div _7"><div class="cms w-dyn-list"><div class="cms-list g-2 w-dyn-items" role="list"><div class="articel-item w-dyn-item" id="w-node-_02a574a0-dc92-ae8e-299a-579ca2635bcb-04f7ce1b" role="listitem"><a class="decode w-inline-block" data-scramble="" data-wf-element-id="02a574a0-f68a-8fc0-c202-a187e6bbbd2c" href="https://www.flowtopus.com/" rel="noopener noreferrer" target="_blank"><div class="form-divider"></div><div class="global-subline-div _2"><div class="global-grid remains-grid-on-mobile"><div class="img-wrap-blog" data-case-brand="flowtopus" id="w-node-_02a574a0-2992-2c43-a041-e56f920b7893-04f7ce1b"><img alt="Purchasing. With perspective. Flowtopus for Shopify." decoding="async" height="700" loading="lazy" src="/assets/ozastra/case-artwork/flowtopus-shopify-purchasing.webp" width="560"/></div><div class="align-vertically is-left-aligned h-100 is-stretched" id="w-node-_02a574a0-2ea0-9356-b970-75e5e42c5573-04f7ce1b"><div class="align-vertically is-left-aligned"><h2 class="copytext is-left-aligned is-white is-azeret is-regular-caps is-semi">Flowtopus: Software &amp; SaaS</h2><div class="global-subline-div _025 is-left-aligned"><p class="copytext-small is-left-aligned is-grey">Inventory, purchasing and AI-powered supplier intelligence in one workspace. Built by Ozastra to help Shopify teams connect stock visibility with their next purchasing decision.</p></div></div><div class="global-subline-div _1 is-left-aligned"><div class="button-txt is-grey" data-scramble-text="">Explore Flowtopus</div></div></div></div></div></a></div><div class="articel-item w-dyn-item" id="w-node-_02a574a0-dc92-ae8e-299a-579ca2635bcb-04f7ce1b" role="listitem"><a class="decode w-inline-block" data-scramble="" data-wf-element-id="02a574a0-f68a-8fc0-c202-a187e6bbbd2c" href="mailto:contact@ozastra.com?subject=Ozastra%20%3A%20Data%20governance%20and%20MDM"><div class="form-divider"></div><div class="global-subline-div _2"><div class="global-grid remains-grid-on-mobile"><div class="img-wrap-blog" data-case-brand="data" id="w-node-_02a574a0-2992-2c43-a041-e56f920b7893-04f7ce1b"><img alt="Two fields. One standard. Amundi and Johnson &amp; Johnson: finance and healthcare." decoding="async" height="700" loading="lazy" src="/assets/ozastra/case-artwork/data-common-ground.webp" width="560"/></div><div class="align-vertically is-left-aligned h-100 is-stretched" id="w-node-_02a574a0-2ea0-9356-b970-75e5e42c5573-04f7ce1b"><div class="align-vertically is-left-aligned"><h2 class="copytext is-left-aligned is-white is-azeret is-regular-caps is-semi">Data governance &amp; MDM</h2><div class="global-subline-div _025 is-left-aligned"><p class="copytext-small is-left-aligned is-grey">Six years of our team’s work at Amundi and Johnson &amp; Johnson, spanning reference-data automation, data architecture and master data management.</p></div></div><div class="global-subline-div _1 is-left-aligned"><div class="button-txt is-grey" data-scramble-text="">Discuss your data</div></div></div></div></div></a></div></div></div></div></div></div></div></div></div><div class="oz-closing"><div aria-hidden="true" class="oz-footer-material"><picture><source media="(max-width:767px)" srcset="/assets/ozastra/chromium-mobile.webp"/><img alt="" decoding="async" height="1600" loading="lazy" src="/assets/ozastra/chromium-desktop.webp" width="2560"/></picture><canvas></canvas></div><button aria-pressed="false" class="oz-footer-motion" type="button">Pause background animation</button><section aria-labelledby="oz-project-title" class="default-section oz-project-invitation" id="start-a-project">
+<div class="oz-project-inner">
+<h2 id="oz-project-title">What would you like<br/>to build or improve?</h2>
+<div class="oz-project-copy">
+<p>A new product, an existing workflow or data your teams need to trust. Tell us where you are today and what needs to change.</p>
+<a class="oz-project-link" href="mailto:contact@ozastra.com?subject=Project%20enquiry%20%7C%20Ozastra">Discuss your project <span aria-hidden="true">↗</span></a>
+<a class="oz-project-email" href="mailto:contact@ozastra.com">contact@ozastra.com</a>
+</div>
+</div>
+</section><div class="breakpoint-section"><div class="nav-black-to-white"></div><div class="default-section"><footer aria-label="Site footer" class="global-wrapper vp-3 in-footer oz-footer"><nav aria-label="Footer navigation" class="oz-footer-nav">
+<a href="#about">About</a><a href="#product">Expertise</a><a href="#team">Our approach</a><a href="#use-cases">Use cases</a>
+</nav><img alt="Ozastra" class="oz-footer-wordmark" height="50" loading="lazy" src="/assets/ozastra/wordmark-black.svg" width="277"/></footer></div></div></div></div><script data-ozastra-safari-viewport="controller" defer="" src="/assets/ozastra/safari-viewport.js?v=b04b5a81a303"></script><script data-ozastra-chromium="controller" src="/assets/ozastra/delivery/ozastra-chromium-hero-c08d3f68b6f8.js" type="module"></script><script data-ozastra-mission-asset="controller" src="/assets/ozastra/delivery/mission-purpose-controller-fcc40c93727d.js" type="module"></script><script data-ozastra-startup="vendor" defer="" src="/assets/ozastra/legacy-vendor.js?v=a2c66f3753fe"></script><script data-ozastra-startup="interactions" defer="" src="/assets/ozastra/legacy-interactions.js?v=66da521d99d6"></script>
+<!-- =====================================================
+   External Libraries
+===================================================== -->
+<!-- Lenis – Smooth Scroll -->
+
+<!-- GSAP Core -->
+<!-- Slider CSS -->
+
+
+<!-- Slider JS -->
+<!-- =====================================================
+   Finsweet Attributes
+===================================================== -->
+<!-- =====================================================
+   Tabs – Checkbox Styling
+===================================================== -->
+<!-- =====================================================
+   Forms
+===================================================== -->
+<!-- =====================================================
+   Navigation Link Hover
+===================================================== -->
+<!-- =====================================================
+   Footer Link Hover
+===================================================== -->
+<!-- =====================================================
+   Page Transition
+===================================================== -->
+<!-- =====================================================
+   Number counter
+===================================================== -->
+<!-- =====================================================
+   Stroke Scroll Animation
+===================================================== -->
+<!-- =====================================================
+   Footer Time
+===================================================== -->
+<!-- =====================================================
+  CMS Slider
+===================================================== -->
+<!-- =====================================================
+   Static Slider
+===================================================== -->
+<!-- =====================================================
+  Footer Dynamic Year
+===================================================== -->
+<!-- =====================================================
+  Pop Up
+===================================================== -->
+<!-- =====================================================
+     E-Mail Copy & Paste
+===================================================== -->
+<!-- =====================================================
+   Page Transition
+===================================================== -->
+<!-- =====================================================
+   Text Scramble – Hover Button
+===================================================== -->
+<!-- =====================================================
+   Text Scramble – ScrollTrigger
+===================================================== -->
+<!-- =====================================================
+   Text Scramble – Menu Toggle Button
+===================================================== -->
+<!-- =====================================================
+   Text Scramble – Menü öffnen (Mobile Nav-Items)
+===================================================== -->
+<!-- =====================================================
+   Text Scramble – Menu Toggle Button (mit externem Reset)
+===================================================== -->
+<!-- =====================================================
+   Lenis – Smooth Scroll Init
+=====================================================-->
+<!-- 3D Carousel -->
+<script data-ozastra-orbit-asset="controller" src="/assets/ozastra/delivery/orbit-intro-orbit-d99660316bcd.js" type="module"></script><script data-ozastra-expertise-asset="controller" src="/assets/ozastra/delivery/expertise-expertise-fa87598a15dd.js" type="module"></script><script data-ozastra-services="controller" src="/assets/ozastra/delivery/services-services-3f879f6926e2.js" type="module"></script><script data-ozastra-navigation="controller" src="/assets/ozastra/delivery/ozastra-navigation-theme-71056ca3e3b8.js" type="module"></script>
+<template data-ozastra-case-details="template" id="oz-case-template-flowtopus">
+<div class="oz-case-bar"><span>SELECTED WORK / 01</span><button aria-label="Collapse Flowtopus case study" class="oz-case-close" type="button">Close case study <span aria-hidden="true">−</span></button></div>
+<div class="oz-case-layout">
+<aside class="oz-case-art"><img alt="Purchasing. With perspective. Flowtopus for Shopify." height="625" src="/assets/ozastra/case-artwork/flowtopus-shopify-purchasing.svg" width="500"/><p>BUILT BY OZASTRA<br/><span>Product design · Engineering · AI</span></p></aside>
+<div class="oz-case-story"><p class="oz-case-kicker">SOFTWARE &amp; SAAS / SHOPIFY</p><h2 id="oz-flow-title" tabindex="-1">A purchase starts<br/><span>before the order.</span></h2><p class="oz-case-lead">Stock is running low. A purchase order is open. A supplier’s latest message changes the delivery date. Each tells part of the story. The next decision depends on seeing them together.</p>
+<div class="oz-case-narrative"><p>That is the problem we built Flowtopus around. For a Shopify team, knowing what is in stock is only the beginning. Deciding what to buy means connecting that picture to quantities, outstanding orders and the people supplying them.</p><p>We brought those steps into one workspace. The flow starts with stock visibility and reorder recommendations, giving the team a place to review what needs attention. From there, they can assess proposed quantities, approve a purchase order and follow it through with the supplier. The person making the decision stays in control.</p></div>
+<figure class="oz-case-screen"><a aria-label="Open full-size Flowtopus stock screen" href="/assets/ozastra/case-screenshots/flowtopus-stock.jpg" rel="noopener noreferrer" target="_blank"><img alt="Flowtopus inventory dashboard with stock-risk rows and replenishment information." height="837" loading="lazy" src="/assets/ozastra/case-screenshots/flowtopus-stock.jpg" width="1470"/></a><figcaption>WHERE THE NEXT PURCHASE BEGINS <span>Staging view ↗</span></figcaption></figure>
+<div class="oz-case-narrative"><h3>The story continues with the supplier.</h3><p>An order keeps evolving after it is placed. Flowtopus uses AI to connect supplier messages and documents to the relevant order, bringing commitments and exceptions into the same context as stock and purchasing. A change in the conversation can then inform the next operational decision.</p><p class="oz-case-resolution">The result is a product built around the whole purchasing flow, from the first stock signal to the supplier follow-up.</p></div>
+<div class="oz-case-actions"><a href="https://www.flowtopus.com/" rel="noopener noreferrer" target="_blank">Explore Flowtopus <span aria-hidden="true">↗</span></a><a href="mailto:contact@ozastra.com?subject=Ozastra%20%3A%20Software%20development">Discuss a similar project <span aria-hidden="true">↗</span></a></div>
+</div>
+</div>
+</template>
+<template data-ozastra-case-details="template" id="oz-case-template-data">
+<div class="oz-case-bar"><span>TEAM EXPERIENCE / 02</span><button aria-label="Collapse data governance case study" class="oz-case-close" type="button">Close case study <span aria-hidden="true">−</span></button></div>
+<div class="oz-case-layout">
+<aside class="oz-case-art"><img alt="Two fields. One standard. Amundi and Johnson &amp; Johnson." height="625" src="/assets/ozastra/case-artwork/data-common-ground.svg" width="500"/><p>SIX YEARS OF OUR TEAM’S WORK<br/><span>Finance · Healthcare</span></p></aside>
+<div class="oz-case-story"><p class="oz-case-kicker">DATA GOVERNANCE &amp; MDM</p><h2 id="oz-data-title" tabindex="-1">For data to move,<br/><span>meaning has to follow.</span></h2><p class="oz-case-lead">A record can travel through several systems and still leave people unsure which version to trust. Across six years at Amundi and Johnson &amp; Johnson, members of our team have worked on the foundations that make those records understandable, consistent and accountable.</p>
+<section class="oz-case-company"><div class="oz-case-company-head"><h3>Amundi</h3><span>2020–2024</span></div><div class="oz-case-narrative"><p class="oz-case-setting">A new data provider brings more than another feed. Every field needs a definition, a destination and a way to check that it arrived correctly.</p><p>At Amundi, our team created a shared data dictionary across four relational databases and two web services, giving business and development teams a common way to trace definitions and source relationships. SQL and Python supported the preparation, cleaning and transformation of incoming data, while automation addressed manual entry steps.</p><p>The work continued beyond the dictionary. Provider onboarding brought those definitions into ETL mappings, integration tests and production monitoring, so reference data could be followed from its source into the systems using it.</p></div></section>
+<section class="oz-case-company"><div class="oz-case-company-head"><h3>Johnson &amp; Johnson</h3><span>2025–present</span></div><div class="oz-case-narrative"><p class="oz-case-setting">Within Vision Care’s CRM transformation, the focus turns to the customer record. When systems hold different versions of the same identity, they need shared rules for recognising it and deciding which information takes precedence.</p><p>Our team’s work connects data models and API specifications with a target MDM strategy and a golden-record framework: a trusted reference for each customer. Consent and deletion requirements shape how records move; validation rules and stewardship responsibilities define how they are maintained.</p><p>Migration mappings carry those decisions into the transition between systems. The aim is customer information that teams can interpret, reconcile and take responsibility for.</p></div></section>
+<p class="oz-case-resolution">That experience informs our work at Ozastra: following data from its source to the people responsible for using it.</p>
+<div class="oz-case-actions"><a href="mailto:contact@ozastra.com?subject=Ozastra%20%3A%20Data%20governance%20and%20MDM">Discuss a similar project <span aria-hidden="true">↗</span></a></div>
+</div>
+</div>
+</template>
+<script data-ozastra-case-details="controller" defer="" src="/assets/ozastra/case-studies/details.js?v=976f66cd38ba"></script><script data-ozastra-footer="controller" src="/assets/ozastra/delivery/footer-footer-10693987ef4f.js" type="module"></script>
+</body></html>
