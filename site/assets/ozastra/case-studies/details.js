@@ -9,6 +9,35 @@
   const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
   const mix = (a, b, t) => a + (b - a) * t;
   const snapshot = image => ({ src: image.currentSrc || image.src, rect: image.getBoundingClientRect() });
+  // Each open case has its own address, so it can be shared and reopened.
+  const caseHash = /^#case-([a-z]+)$/;
+  function writeHash(name) {
+    const target = name ? `#case-${name}` : '';
+    if (location.hash === target) return;
+    history.replaceState(history.state, '', location.pathname + location.search + target);
+  }
+  function copyLink(button, name) {
+    const url = `${location.origin}${location.pathname}#case-${name}`;
+    const done = () => {
+      button.textContent = 'Link copied';
+      button.dataset.copied = 'true';
+      clearTimeout(button._reset);
+      button._reset = setTimeout(() => { button.textContent = 'Copy link'; delete button.dataset.copied; }, 2200);
+    };
+    const fallback = () => {
+      const field = document.createElement('textarea');
+      field.value = url;
+      field.setAttribute('readonly', '');
+      field.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+      document.body.append(field);
+      field.select();
+      const copied = document.execCommand('copy');
+      field.remove();
+      if (copied) done();
+    };
+    if (navigator.clipboard?.writeText) navigator.clipboard.writeText(url).then(done, fallback);
+    else fallback();
+  }
   function placeScroll(top) {
     if (typeof lenis !== 'undefined') lenis.scrollTo(top, { immediate: true, force: true });
     else window.scrollTo({ top, behavior: 'instant' });
@@ -156,6 +185,7 @@
     context.panel.querySelectorAll('.oz-case-art > img,.oz-case-switch > img').forEach(i => i.style.visibility = 'hidden');
     active = null;
     updateTriggers();
+    writeHash(null);
     await transition(context, { startHeight, endHeight, from, targets, opening: false });
     context.cardWrap.classList.remove('oz-case-returning');
     context.panel.inert = false;
@@ -190,6 +220,9 @@
     context.cardWrap.inert = true;
     updateTriggers();
     context.panel.querySelector('.oz-case-close').addEventListener('click', () => close());
+    const copy = context.panel.querySelector('.oz-case-copy');
+    copy?.addEventListener('click', () => copyLink(copy, name));
+    writeHash(name);
     const endHeight = context.panel.getBoundingClientRect().height;
     await transition(context, {
       startHeight, endHeight, from,
@@ -198,7 +231,17 @@
     });
     moving = false;
     if (context.section.getClientRects().length) context.panel.querySelector('h2').focus({ preventScroll: true });
-    else { reset(context); active = null; updateTriggers(); refresh(); }
+    else { reset(context); active = null; updateTriggers(); writeHash(null); refresh(); }
+  }
+  function openFromHash() {
+    const name = caseHash.exec(location.hash)?.[1];
+    if (!name || moving) return;
+    const context = contexts.find(item => item.section.getClientRects().length);
+    const link = context?.links.find(item => item.dataset.caseTrigger === name);
+    if (!link || active?.link === link) return;
+    // Arrive at the section first so the opening motion stays short.
+    placeScroll(Math.max(0, context.section.getBoundingClientRect().top + scrollY - 24));
+    requestAnimationFrame(() => open(context, link));
   }
   document.querySelectorAll('[data-ozastra-cases="work"], [data-ozastra-cases="mobile"]').forEach((section, i) => {
     const cards = section.querySelector('.w-dyn-list');
@@ -248,4 +291,9 @@
   }
   matchMedia('(max-width: 991px)').addEventListener('change', syncLayout);
   addEventListener('resize', syncLayout);
+  addEventListener('hashchange', openFromHash);
+  // Wait for smooth scrolling and pinned scenes to settle before arriving.
+  const arrive = () => setTimeout(openFromHash, 150);
+  if (document.readyState === 'complete') arrive();
+  else addEventListener('load', arrive, { once: true });
 })();
