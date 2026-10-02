@@ -770,7 +770,7 @@ html .nav[data-ozastra-nav-theme] .nav-btn-desktop a:focus-visible { outline:2px
   html .nav[data-ozastra-nav-theme] .nav-btn-desktop .secondary-button::after { transition:none; }
 }
 
-/* The wordmark uses the same type class as the contact link. */
+/* The logo is inline and takes the navigation foreground colour. */
 html .nav[data-ozastra-nav-theme] .nav-logo-div {
   width:auto;
   max-width:none;
@@ -778,11 +778,16 @@ html .nav[data-ozastra-nav-theme] .nav-logo-div {
   text-decoration:none;
   filter:none !important;
 }
-html .nav .ozastra-nav-wordmark {
+html .nav .ozastra-nav-logo {
   display:block;
-  font-size:19.5px;
-  line-height:1.4;
-  white-space:nowrap;
+  width:auto;
+  height:30px;
+  flex:none;
+}
+/* On phones the logo may be wider than its grid cell: let it show in full. */
+html .nav[data-ozastra-nav-theme] .nav-logo-div { overflow:visible; }
+@media (max-width:479px) {
+  html .nav .ozastra-nav-logo { height:clamp(20px, 6.2vw, 26px); }
 }
 
 /* Preserve the original section and card layout, with two case studies. */
